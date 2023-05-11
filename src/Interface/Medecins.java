@@ -246,18 +246,49 @@ public class Medecins {
 			public void actionPerformed(ActionEvent e) {
 
 				try {
+					 if (txt_nom.getText().isEmpty() || txt_cin.getText().isEmpty() || txt_tel.getText().isEmpty() || txt_adresse.getText().isEmpty()|| txt_specialite.getText().isEmpty() ) {
+				    	   JOptionPane.showMessageDialog(null, "Veuillez remplir tous les champs obligatoires", "Erreur", JOptionPane.INFORMATION_MESSAGE);
+				           return;
+				       }
+					  int tel;
+				        java.util.Date date1;
+				        java.util.Date date;
+				        java.sql.Date sqlDate1;
+				        java.sql.Date sqlDate;
+
+					  try {
+				             tel = Integer.parseInt(txt_tel.getText());
+				        } catch (NumberFormatException ex) {
+				            JOptionPane.showMessageDialog(null, "Vérifier vos données", "Erreur de saisie", JOptionPane.ERROR_MESSAGE);
+				            return;
+				        }
+					 
+				        try {
+				             date1 = txt_naissance.getDate();
+				            sqlDate1 = new java.sql.Date(date1.getTime());
+				        } catch (Exception ex) {
+				            JOptionPane.showMessageDialog(null, "Vérifier vos données", "Erreur de saisie", JOptionPane.ERROR_MESSAGE);
+				            return;
+				        } 
+				        try {
+				             date = txt_recrutement.getDate();
+				            sqlDate = new java.sql.Date(date1.getTime());
+				        } catch (Exception ex) {
+				            JOptionPane.showMessageDialog(null, "Vérifier vos données", "Erreur de saisie", JOptionPane.ERROR_MESSAGE);
+				            return;
+				        }
 						Connect();
 
 						pst=con.prepareStatement("insert into medecin (nomprenom , datenaissance , tel , adresse , daterecrutement , specialite , CIN)  values (?,?,?,?,?,?,?)");
 				       pst.setString(1, txt_nom.getText());
-				       java.util.Date date1 = txt_naissance.getDate();
-				       java.sql.Date sqlDate1 = new java.sql.Date(date1.getTime());
+				        date1 = txt_naissance.getDate();
+				        sqlDate1 = new java.sql.Date(date1.getTime());
 				       pst.setDate(2, sqlDate1);
-				       int tel = Integer.parseInt(txt_tel.getText());
+				       tel = Integer.parseInt(txt_tel.getText());
 				       pst.setInt(3, tel);
 				       pst.setString(4, txt_adresse.getText());
-				       java.util.Date date = txt_recrutement.getDate();
-				       java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+				       date = txt_recrutement.getDate();
+				        sqlDate = new java.sql.Date(date.getTime());
 				       pst.setDate(5, sqlDate);
 				       pst.setString(6, txt_specialite.getText());
 				       pst.setString(7, txt_cin.getText());
@@ -291,18 +322,50 @@ public class Medecins {
 		btn_modifier.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				 try {
+					 
+					 if (txt_nom.getText().isEmpty() || txt_cin.getText().isEmpty() || txt_tel.getText().isEmpty() || txt_adresse.getText().isEmpty()|| txt_specialite.getText().isEmpty() ) {
+				    	   JOptionPane.showMessageDialog(null, "Veuillez remplir tous les champs obligatoires", "Erreur", JOptionPane.INFORMATION_MESSAGE);
+				           return;
+				       }
+					  int tel;
+				        java.util.Date date1;
+				        java.util.Date date;
+				        java.sql.Date sqlDate1;
+				        java.sql.Date sqlDate;
+
+					  try {
+				             tel = Integer.parseInt(txt_tel.getText());
+				        } catch (NumberFormatException ex) {
+				            JOptionPane.showMessageDialog(null, "Vérifier vos données", "Erreur de saisie", JOptionPane.ERROR_MESSAGE);
+				            return;
+				        }
+					 
+				        try {
+				             date1 = txt_naissance.getDate();
+				            sqlDate1 = new java.sql.Date(date1.getTime());
+				        } catch (Exception ex) {
+				            JOptionPane.showMessageDialog(null, "Vérifier vos données", "Erreur de saisie", JOptionPane.ERROR_MESSAGE);
+				            return;
+				        } 
+				        try {
+				             date = txt_recrutement.getDate();
+				            sqlDate = new java.sql.Date(date1.getTime());
+				        } catch (Exception ex) {
+				            JOptionPane.showMessageDialog(null, "Vérifier vos données", "Erreur de saisie", JOptionPane.ERROR_MESSAGE);
+				            return;
+				        }
 				        Connect();
 				        
 				        pst=con.prepareStatement("update medecin set nomprenom=?, datenaissance=?, tel=?, adresse=?, daterecrutement=?, specialite=? , CIN=?  where id=?");
 				        pst.setString(1, txt_nom.getText());
-				        java.util.Date date1 = txt_naissance.getDate();
-				        java.sql.Date sqlDate1 = new java.sql.Date(date1.getTime());
+				         date1 = txt_naissance.getDate();
+				         sqlDate1 = new java.sql.Date(date1.getTime());
 				        pst.setDate(2, sqlDate1);
-				        int tel = Integer.parseInt(txt_tel.getText());
+				         tel = Integer.parseInt(txt_tel.getText());
 				        pst.setInt(3, tel);
 				        pst.setString(4, txt_adresse.getText());
-				        java.util.Date date = txt_recrutement.getDate();
-				        java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+				         date = txt_recrutement.getDate();
+				         sqlDate = new java.sql.Date(date.getTime());
 				        pst.setDate(5, sqlDate);
 				        pst.setString(6, txt_specialite.getText());
 				        pst.setString(7, txt_cin.getText());
