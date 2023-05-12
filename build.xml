@@ -11,7 +11,7 @@
     <property name="source" value="17"/>
                 <property name="src.dir" value="src"/>
 <classpath>
-    <pathelement location="path/to/jcalendar.jar"/>
+    <pathelement location="../../../Downloads/jcalendar-1.4/lib/jcalendar-1.4.jar"/>
 </classpath>
 
     <path id="Clinique.classpath">
