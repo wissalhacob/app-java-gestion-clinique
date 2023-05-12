@@ -60,7 +60,7 @@ public class Home {
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		JLabel lab = new JLabel("Gestion du Clinique");
+		JLabel lab = new JLabel("Gestion du Cliniqueee");
 		lab.setHorizontalAlignment(SwingConstants.CENTER);
 		lab.setFont(new Font("Sylfaen", Font.PLAIN, 31));
 		lab.setForeground(Color.BLUE);
