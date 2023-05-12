@@ -6,32 +6,32 @@ pipeline {
     stages {
         stage('---clean---') {
             steps {
-                bat "ant clean" // Pour nettoyer votre projet Java Swing
+                bat "mvn clean" // Pour nettoyer votre projet Java Swing
             }
         }
         stage('--compile--') {
             steps {
-                bat "ant compile" // Pour compiler votre projet Java Swing
+                bat "mvn compile" // Pour compiler votre projet Java Swing
             }
         }
         stage('--test--') {
             steps {
-                bat "ant test" // Pour exécuter les tests unitaires de votre projet Java Swing
+                bat "mvn test" // Pour exécuter les tests unitaires de votre projet Java Swing
             }
         }
         stage('--package--') {
             steps {
-                bat "ant package" // Pour créer un package de votre application Java Swing
+                bat "mvn package" // Pour créer un package de votre application Java Swing
             }
         }
         stage('Build') {
             steps {
-                bat "ant build" // Pour construire votre application Java
+                bat "mvn install" // Pour construire votre application Java
             }
         }
         stage('Run') {
             steps {
-                bat " start java -jar C:/Program Files/Java/jdk-11/bin/java.exe"
+                bat "java -jar path/to/your/jar/file.jar"
             }
         }
     }
