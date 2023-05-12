@@ -67,6 +67,11 @@
             <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
         </unzip>
     </target>
+                <target name="compile" description="Compile the source code">
+    <mkdir dir="${build.dir}" />
+    <javac srcdir="${src.dir}" destdir="${build.dir}" verbose="true" />
+</target>
+
     <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
@@ -91,10 +96,7 @@
             <classpath refid="run.Patient.classpath"/>
         </java>
     </target>
-          <target name="compile" description="Compile the source code">
-    <mkdir dir="${build.dir}" />
-    <javac srcdir="${src.dir}" destdir="${build.dir}" />
-</target>
+          
 
 
 
