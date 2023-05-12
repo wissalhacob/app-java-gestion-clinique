@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        JAVA_HOME = tool 'JDK 11' // Spécifiez ici la version de Java que vous utilisez pour votre application
+        JAVA_HOME = tool 'jdk-11' // Spécifiez ici la version de Java que vous utilisez pour votre application
     }
     stages {
         stage('---clean---') {
