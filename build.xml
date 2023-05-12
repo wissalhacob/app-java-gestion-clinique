@@ -15,27 +15,27 @@
     <path id="Clinique.classpath">
         <pathelement location="bin"/>
         <pathelement location="../../../Downloads/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33.jar"/>
-        <pathelement location="../../../Downloads/jcalendar-1.4/lib/jcalendar-1.4.jar"/>
+        <pathelement location="C:\Users\hacob\Downloads\jcalendar-1.4\lib\jcalendar-1.4.jar"/>
     </path>
     <path id="run.Home (1).classpath">
         <path refid="Clinique.classpath"/>
         <pathelement location="../../../Downloads/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33.jar"/>
-        <pathelement location="../../../Downloads/jcalendar-1.4/lib/jcalendar-1.4.jar"/>
+        <pathelement location="C:\Users\hacob\Downloads\jcalendar-1.4\lib\jcalendar-1.4.jar"/>
     </path>
     <path id="run.Home.classpath">
         <path refid="Clinique.classpath"/>
         <pathelement location="../../../Downloads/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33.jar"/>
-        <pathelement location="../../../Downloads/jcalendar-1.4/lib/jcalendar-1.4.jar"/>
+        <pathelement location="C:\Users\hacob\Downloads\jcalendar-1.4\lib\jcalendar-1.4.jar"/>
     </path>
     <path id="run.Medecins.classpath">
         <path refid="Clinique.classpath"/>
         <pathelement location="../../../Downloads/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33.jar"/>
-        <pathelement location="../../../Downloads/jcalendar-1.4/lib/jcalendar-1.4.jar"/>
+        <pathelement location="C:\Users\hacob\Downloads\jcalendar-1.4\lib\jcalendar-1.4.jar"/>
     </path>
     <path id="run.Patient.classpath">
         <path refid="Clinique.classpath"/>
         <pathelement location="../../../Downloads/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33.jar"/>
-        <pathelement location="../../../Downloads/jcalendar-1.4/lib/jcalendar-1.4.jar"/>
+        <pathelement location="C:\Users\hacob\Downloads\jcalendar-1.4\lib\jcalendar-1.4.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
