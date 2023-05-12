@@ -6,27 +6,27 @@ pipeline {
     stages {
         stage('---clean---') {
             steps {
-                bat "mvn clean" // Pour nettoyer votre projet Java Swing
+                bat "ant clean" // Pour nettoyer votre projet Java Swing
             }
         }
         stage('--compile--') {
             steps {
-                bat "mvn compile" // Pour compiler votre projet Java Swing
+                bat "ant compile" // Pour compiler votre projet Java Swing
             }
         }
         stage('--test--') {
             steps {
-                bat "mvn test" // Pour exécuter les tests unitaires de votre projet Java Swing
+                bat "ant test" // Pour exécuter les tests unitaires de votre projet Java Swing
             }
         }
         stage('--package--') {
             steps {
-                bat "mvn package" // Pour créer un package de votre application Java Swing
+                bat "ant package" // Pour créer un package de votre application Java Swing
             }
         }
         stage('Build') {
             steps {
-                bat "mvn install" // Pour construire votre application Java
+                bat "ant install" // Pour construire votre application Java
             }
         }
         stage('Run') {
