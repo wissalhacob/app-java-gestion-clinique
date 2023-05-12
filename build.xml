@@ -89,4 +89,8 @@
             <classpath refid="run.Patient.classpath"/>
         </java>
     </target>
+                <target name="compile" description="Compile the code">
+    <javac srcdir="${src.dir}" destdir="${build.dir}" />
+</target>
+
 </project>
