@@ -40,6 +40,7 @@ public class Home {
 	 * Create the application.
 	 */
 	public Home() {
+		initialize();
 	}
 
 	/**
