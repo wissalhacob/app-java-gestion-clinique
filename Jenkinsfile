@@ -32,6 +32,7 @@ pipeline {
         stage('Run') {
             steps {
                 sh "java -jar <path-to-jar-file>" // Pour exécuter votre application Java
+                bat 'start java -jar <path-to-jar-file>'
             }
         }
     }
