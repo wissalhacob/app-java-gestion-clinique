@@ -24,10 +24,7 @@ pipeline {
                 sh "ant package" // Pour créer un package de votre application Java Swing
             }
         }
-        stage('--deploy--') {
-            steps {
-                // Utilisez les commandes pour déployer votre application Java Swing
-            }
+        
         }
     }
 }
