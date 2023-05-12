@@ -31,7 +31,7 @@ pipeline {
         }
         stage('Run') {
             steps {
-                bat "start java -jar <C:\Program Files\Java\jdk-11>"
+                 sh "java -jar <C:\Program Files\Java\jdk-11>"
             }
         }
     }
