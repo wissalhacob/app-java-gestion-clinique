@@ -24,7 +24,5 @@ pipeline {
                 sh "ant package" // Pour créer un package de votre application Java Swing
             }
         }
-        
-        }
-    
-
+    }
+}
