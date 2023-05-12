@@ -67,10 +67,11 @@
             <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
         </unzip>
     </target>
-                <target name="compile" description="Compile the source code">
+              <target name="compile" description="Compile the source code">
     <mkdir dir="${build.dir}" />
-    <javac srcdir="${src.dir}" destdir="${build.dir}" verbose="true" />
+    <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false" />
 </target>
+
 
     <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
