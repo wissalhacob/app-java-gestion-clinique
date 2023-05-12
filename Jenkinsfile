@@ -24,5 +24,15 @@ pipeline {
                 sh "ant package" // Pour créer un package de votre application Java Swing
             }
         }
+        stage('Build') {
+            steps {
+                sh "ant build" // Pour construire votre application Java
+            }
+        }
+        stage('Run') {
+            steps {
+                sh "java -jar <path-to-jar-file>" // Pour exécuter votre application Java
+            }
+        }
     }
 }
