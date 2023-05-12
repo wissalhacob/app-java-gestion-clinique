@@ -9,6 +9,8 @@
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="17"/>
     <property name="source" value="17"/>
+                <property name="src.dir" value="src"/>
+
     <path id="Clinique.classpath">
         <pathelement location="bin"/>
         <pathelement location="../../../Downloads/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33.jar"/>
@@ -89,8 +91,11 @@
             <classpath refid="run.Patient.classpath"/>
         </java>
     </target>
-                <target name="compile" description="Compile the code">
+          <target name="compile" description="Compile the source code">
+    <mkdir dir="${build.dir}" />
     <javac srcdir="${src.dir}" destdir="${build.dir}" />
 </target>
+
+
 
 </project>
